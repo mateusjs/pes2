@@ -1,43 +1,46 @@
+
+
 <div style="text-align:center;"><img src  ="https://i.ytimg.com/vi/L6txtEP0gWk/hqdefault.jpg" /></div>
 
 <h1 style="text-align:center;">Lista de artigos</h1>
 
-
-</br>
-<%= link_to 'New article', new_article_path %>
 <% @articles.each do |article| %>
+</br> 
+<%= link_to 'New article' , new_article_path %>
+
 
 <table>
-  <tr>
-    <th>Title</th>
-  </tr>
-  
-  <tr></tr>
-  
-  <tr>
-     <td style="text-align:center;"><%= article.title %></td>
-  </tr>
-  
-  <tr></tr>
-  
-  <tr>
-    <th>Text</th>
-    <th colspan="3"></th>
-  </tr>
-  
-  <tr>
-    <td><%= article.text %></td>
-  </tr>
-  
     <tr>
-     
-      
-      <td><%= link_to 'Abrir', article_path(article) %>  <%= link_to 'Editar', edit_article_path(article) %>
-      <%= link_to 'Deletar', article_path(article),
-              method: :delete,
-              data: { confirm: 'Você tem certeza de que deseja deletar o artigo ?' } %> </td>
-     
+      <th>Title</th>
     </tr>
-  <% end %>
-</table>
-<script type="text/javascript">alert("Olá!")</script>
+    
+    <tr></tr>
+    
+    <tr>
+      <td sytle="text-align::center;"><%= article.title%></td>
+    </tr>
+    
+    <tr></tr>
+    
+    <tr>
+      <th>Text</th>
+      <th colspan="3"></th>
+    </tr>
+  
+  <tr>
+    
+    <td><%= article.text%> </td>
+  </tr>
+  
+  <tr>
+    
+    <td><%= link_to 'Abrir', article_path(article) %> <%= link_to 'Editar' , edit_article_path(article) %>
+    <%= link_to 'Deletar', article_path(article),
+                method: :delete,
+                data: { confirm: 'Você tem certeza de que deseja deletar o artigo ?' } %> </td>
+  </tr>
+  <%end%>
+  
+  </table>
+ 
+    

@@ -9,10 +9,10 @@ default: &default
 
 default: &default
   adapter: postgresql
-  encoding: SQL_ASCII
+  encoding: utf8
   host: localhost
   pool: 5
-  username: pes2
+  username: postgres
   password: postgres
 
 development:
