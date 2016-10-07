@@ -4,11 +4,11 @@
 
 <h1 style="text-align:center;">Lista de artigos</h1>
 
-<% @articles.each do |article| %>
+
 </br> 
 <%= link_to 'New article' , new_article_path %>
 
-
+<% @articles.each do |article| %>
 <table>
     <tr>
       <th>Title</th>
