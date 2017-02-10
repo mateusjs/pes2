@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.tabelafilme{
+    border:3px solid #FF7F50;
+    border-left-style: none;
+    border-right-style: none;
+    width="400px";
+}
+</style>
+</head>
+
+<body>
+    <h1 style="text-align:justfied;">Rotten Potatoes</h1>
+    
+    <table style="display: inline-block", width="500px",>
+        <tr>
+          <th width="100px"><b>Titulo do filme</b></th>
+          <th width="100px"><b>Nota</b></th>
+          <th width="100px"><b>Data de lançamento</b></th>
+          <th width="100px"><b>Mais informações</b></th>
+        </tr>
+        
+        <tr>
+            <% @articles.each do |article| %>
+                <table width="400px" class="tabelafilme">
+                    <th width="100px"sytle="text-align::center;"><td><%= article.title%></td></th>
+                    <th width="100px"><td><%= article.text%> </td></th>
+                    <th width="100px"><td><%= article.data%> </td></th>
+                    <th width="100px"><td><%= link_to 'Mais Sobre', article_path(article) %></td></th>
+                
+                
+            <%end%>
+                </table>
+        </tr>
+    </table>
+    <br><td><%= link_to 'Novo Filme' , new_article_path %></td>
+</body>

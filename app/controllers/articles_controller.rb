@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
  
   def show
     @article = Article.find(params[:id])
+    
   end
  
   def new
@@ -22,7 +23,8 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
  
     if @article.save
-      redirect_to @article
+      flash[:success] = "Thanks! I'll be in touch soon!"
+      redirect_to new
     else
       render 'new'
     end
@@ -45,9 +47,9 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
  
-  private
-    def article_params
-      params.require(:article).permit(:title, :text)
-    end
+  
+  def article_params
+    params.require(:article).permit(:title, :text, :data)
+  end
     
 end

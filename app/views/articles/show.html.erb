@@ -1,22 +1,24 @@
-<h1>Artigo</h1>
-<p>
-  <strong>Title:</strong>
+<h1>Filme</h1>
+<p><font size="5"> 
+  <strong>Titulo do Filme:</strong>
   <%= @article.title %>
 </p>
- 
 <p>
-  <strong>Text:</strong>
+  <strong>Nota do filme:</strong>
   <%= @article.text %>
 </p>
+<p>
+  <strong>Data de Lancamento:</strong>
+  <%= @article.data %>
+</p>
+</font> <br />
 
  
-<h2>Comments</h2>
-<%= render @article.comments %>
- 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
- 
+<!--<h2>Comments</h2>                               ///parte de comentários caso desejada 
+<%= render @article.comments %>                     ///
+                                                    ///  
+<h2>Adcionar um comentario sobre o filme:</h2>      ///
+<%= render 'comments/form' %>                       ///  -->
+
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
-
-<script type="text/javascript">alert("Ivonei não tô vendo a minha nota máxima !")</script>
