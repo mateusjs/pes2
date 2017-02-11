@@ -8,31 +8,32 @@
     border-right-style: none;
     width="400px";
 }
+h1 {
+    background-color: #FF7F50;
+}
 </style>
 </head>
-
 <body>
-    <h1 style="text-align:justfied;">Rotten Potatoes</h1>
     
-    <table style="display: inline-block", width="500px",>
+    <h1 style="text-align:justfied;"><font color = #FFFAFA >Rotten Potatoes</font></h1>
+    <table>
         <tr>
-          <th width="100px"><b>Titulo do filme</b></th>
-          <th width="100px"><b>Nota</b></th>
-          <th width="100px"><b>Data de lançamento</b></th>
-          <th width="100px"><b>Mais informações</b></th>
-        </tr>
-        
+          <th><td WIDTH=300><font color = #8B0000><b>Titulo do filme</b></font></td></th>
+          <th><td WIDTH=300><font color = #8B0000><b>Nota</b></font></td></th>
+          <th><td WIDTH=300><font color = #8B0000><b>Data de Lançamento</b></font></td></th>
+          <th><td WIDTH=300><font color = #8B0000><b>Mais Informações</b></font></td></th>
+        </tr>        
+    </table>
+    <table class = tabelafilme>
         <tr>
             <% @articles.each do |article| %>
-                <table width="400px" class="tabelafilme">
-                    <th width="100px"sytle="text-align::center;"><td><%= article.title%></td></th>
-                    <th width="100px"><td><%= article.text%> </td></th>
-                    <th width="100px"><td><%= article.data%> </td></th>
-                    <th width="100px"><td><%= link_to 'Mais Sobre', article_path(article) %></td></th>
-                
-                
+                <th><td WIDTH=300><%= article.title%></td></th>
+                <th><td WIDTH=300><%= article.text%></td></th>
+                <th><td WIDTH=300><%= article.data%></td></th>
+                <th><td WIDTH=300><%= link_to 'Mais Sobre', article_path(article)%></td></th>
+                <tr></tr>
             <%end%>
-                </table>
+                
         </tr>
     </table>
     <br><td><%= link_to 'Novo Filme' , new_article_path %></td>
