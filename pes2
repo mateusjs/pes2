@@ -1,0 +1,14 @@
+                                List of databases
+      Name       |  Owner   | Encoding  | Collate | Ctype |   Access privileges   
+-----------------+----------+-----------+---------+-------+-----------------------
+ app_development | postgres | UTF8      | C       | C     | 
+ app_test        | postgres | UTF8      | C       | C     | 
+ pes2            | postgres | SQL_ASCII | C       | C     | 
+ pes2 banco      | ubuntu   | SQL_ASCII | C       | C     | 
+ postgres        | postgres | SQL_ASCII | C       | C     | 
+ template0       | postgres | SQL_ASCII | C       | C     | =c/postgres          +
+                 |          |           |         |       | postgres=CTc/postgres
+ template1       | postgres | UTF8      | C       | C     | 
+ ubuntu          | ubuntu   | SQL_ASCII | C       | C     | 
+(8 rows)
+

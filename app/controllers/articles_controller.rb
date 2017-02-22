@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   
-  http_basic_authenticate_with name: "mateus", password: "mateus", except: [:index, :show]
+  http_basic_authenticate_with name: "mateus", password: "batata", except: [:index, :show]
   
   def index
     @articles = Article.all
@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
  
     if @article.save
-      flash[:success] = "Thanks! I'll be in touch soon!"
+      flash[:success] = "Filme salvo com sucesso"
       redirect_to new
     else
       render 'new'
@@ -49,7 +49,7 @@ class ArticlesController < ApplicationController
  
   
   def article_params
-    params.require(:article).permit(:title, :text, :data)
+    params.require(:article).permit(:title, :text, :date, :hora, :date, :nota, :rating)
   end
     
 end

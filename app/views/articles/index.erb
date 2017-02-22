@@ -11,6 +11,11 @@
 h1 {
     background-color: #FF7F50;
 }
+a:link {
+    color: none;
+    text-decoration: none;
+}
+
 </style>
 </head>
 <body>
@@ -28,8 +33,8 @@ h1 {
         <tr>
             <% @articles.each do |article| %>
                 <th><td WIDTH=300><%= article.title%></td></th>
-                <th><td WIDTH=300><%= article.text%></td></th>
-                <th><td WIDTH=300><%= article.data%></td></th>
+                <th><td WIDTH=300><%= article.rating%></td></th>
+                <th><td WIDTH=300><%= article.date%></td></th>
                 <th><td WIDTH=300><%= link_to 'Mais Sobre', article_path(article)%></td></th>
                 <tr></tr>
             <%end%>

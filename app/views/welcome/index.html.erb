@@ -1,13 +1,22 @@
 <head>
-<style type="text/css"> 
-    a:link { text-decoration:none; color:red;} 
-</style>
+
 </head>
-<h1 style="text-align:center;"><font color = "#663300">Rotten Potatoes</font></h1>
+<style> 
+    a:link {
+        color: red;
+        text-decoration: none;
+    }
+    .link{
+        color: blue;
+        text-decoration: none;
+        text-align: center;
+    }
+ 
+</style>
+<body>
 
-<div style="text-align:center;"><img src  ="http://www.gpdesenhos.com.br/imagens/disney/srcabecadebatata2.jpg" /></div>
+    <h1 style="text-align:center;"><font color = "#663300">Rotten Potatoes</font></h1>
+    <div style="text-align:center;"><img src  ="http://www.gpdesenhos.com.br/imagens/disney/srcabecadebatata2.jpg" /></div>
+    <h1 class = "link"><%= link_to 'All Movies', controller: 'articles' %></h1>
 
-
-
-<h1 style="text-align:center;"><font color = "#000000",><%= link_to 'All Movies', controller: 'articles' %></font></h1>
-
+</body>

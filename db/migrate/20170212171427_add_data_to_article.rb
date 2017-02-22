@@ -1,5 +1,5 @@
 class AddDataToArticle < ActiveRecord::Migration
   def change
-    add_column :articles, :data, :datetime
+    add_column :articles, :date, :string
   end
 end

@@ -1,4 +1,18 @@
-<h1>Editar informacoes sobre o filme</h1>
+<html>
+<head>
+<style>
+.tabelafilme{
+    border:3px solid #FF7F50;
+    border-left-style: none;
+    border-right-style: none;
+    width="400px";
+}
+h1 {
+    background-color: #FF7F50;
+}
+</style>
+</head>
+<h1><font color = #FFFAFA >Editar informações sobre o filme</font></h1>
  
 <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
  
@@ -18,23 +32,23 @@
  
   <p>
     <p>
-    <%= f.label :Titulo %><br>
+    <%= f.label :Titulo%><br>
     <%= f.text_field :title %>
     </p>
   </p>
  
   <p>
-    <%= f.label :Nota %><br>
-    <%= f.text_area :text %>
+    <%= f.label :Nota%><br>
+    <%= f.number_field :rating, :step => "0.05" %>
   </p>
    <p>
     <%= f.label :Data%><br>
-    <%= f.text_area :data %>
+    <%= f.date_field :date%>
   </p>
  
  
   <p>
-    <%= f.submit %>
+    <%= f.submit "Salvar" %>
    
   </p>
   <%= link_to 'Deletar', article_path(@article),
